@@ -1,0 +1,95 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#0d001f;
+    background-image:
+    radial-gradient(circle at top left,#8a2be2 0%,transparent 30%),
+    radial-gradient(circle at bottom right,#9400ff 0%,transparent 30%);
+}
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.card{
+    width:400px;
+    background:#140028;
+    padding:40px;
+    border-radius:20px;
+    border:2px solid #b026ff;
+    box-shadow:0 0 25px #b026ff;
+    text-align:center;
+}
+
+.card h1{
+    color:#d96fff;
+    margin-bottom:15px;
+    text-shadow:0 0 15px #d96fff;
+}
+
+.card h2{
+    color:white;
+    margin-bottom:25px;
+}
+
+.card form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.card input{
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#24003f;
+    color:white;
+    outline:none;
+}
+
+.card input:focus{
+    box-shadow:0 0 10px #c93cff;
+}
+
+.card button{
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#a100ff;
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.card button:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px #c93cff;
+}
+
+.card p{
+    color:white;
+    margin-top:20px;
+}
+
+.card a{
+    color:#d96fff;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.card a:hover{
+    text-shadow:0 0 10px #d96fff;
+}

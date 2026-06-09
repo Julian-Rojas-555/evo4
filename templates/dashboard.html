@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Evo Fitsor</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+<body>
+
+<header>
+
+    <div class="logo">
+        <img src="/static/images/logo.png"
+             alt="Logo">
+        <span>Evo Fitsor</span>
+    </div>
+
+    <a href="/logout" class="logout-btn">
+        Cerrar Sesión
+    </a>
+
+</header>
+
+<div class="main-container">
+
+    <div class="card">
+
+        <h2>Información del Usuario</h2>
+
+        <form action="/generate" method="POST">
+
+            <label>Edad</label>
+            <input type="number"
+                   name="edad"
+                   min="10"
+                   max="100"
+                   required>
+
+            <label>Sexo</label>
+
+            <select name="sexo" required>
+                <option value="">Seleccione</option>
+                <option>Masculino</option>
+                <option>Femenino</option>
+            </select>
+
+            <label>Peso (kg)</label>
+            <input type="number"
+                   name="peso"
+                   step="0.1"
+                   required>
+
+            <label>% Grasa Corporal</label>
+            <input type="number"
+                   name="grasa"
+                   step="0.1"
+                   required>
+
+            <label>Objetivo</label>
+
+            <select name="objetivo" required>
+
+                <option value="">Seleccione</option>
+
+                <option value="bajar_grasa">
+                    Bajar Grasa
+                </option>
+
+                <option value="ganar_musculo">
+                    Ganar Músculo
+                </option>
+
+                <option value="recomposicion">
+                    Recomposición Corporal
+                </option>
+
+            </select>
+
+            <button type="submit">
+                Generar Plan
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Registro - Evo Fitsor</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>Evo Fitsor</h1>
+
+        <h2>Crear Cuenta</h2>
+
+        <form action="/register_user" method="POST">
+
+            <input
+                type="text"
+                name="username"
+                placeholder="Usuario"
+                required
+            >
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Contraseña"
+                required
+            >
+
+            <button type="submit">
+                Registrarme
+            </button>
+
+        </form>
+
+        <p>
+            ¿Ya tienes cuenta?
+        </p>
+
+        <a href="/">
+            Iniciar Sesión
+        </a>
+
+    </div>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='js/login.js') }}"></script>
+</body>
+</html>

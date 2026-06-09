@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados - Evo Fitsor</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/results.css') }}">
+</head>
+<body>
+
+<header>
+
+    <a href="/dashboard" class="logo-link">
+
+        <div class="logo">
+
+            <img src="/static/images/logo.png"
+                 alt="Logo">
+
+            <span>Evo Fitsor</span>
+
+        </div>
+
+    </a>
+
+    <a href="/logout" class="logout-btn">
+        Cerrar Sesión
+    </a>
+
+</header>
+
+<div class="container">
+
+    <div class="result-card">
+
+        <h2>Dieta Recomendada</h2>
+
+        <pre>
+{{ dieta }}
+        </pre>
+
+    </div>
+
+    <div class="result-card">
+
+        <h2>Rutina Recomendada</h2>
+
+        <pre>
+{{ rutina }}
+        </pre>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/results.js') }}"></script>
+
+</body>
+</html>
